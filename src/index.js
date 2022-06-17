@@ -12,4 +12,6 @@ app.use(express.urlencoded());
 const routes = require('./routes/routes');
 app.use('/', routes);
 
-app.listen(3000, ()=> console.log("Escutando na porta 3000"));
+const PORT = process.env.PORT || 3000;
+console.log({PORT});
+app.listen(PORT, () => console.log(`Server iniciado na porta ${PORT}`));
