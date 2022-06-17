@@ -1,0 +1,31 @@
+<%-include('includes/header')%>
+<body>
+    <h1 class="titulo"><%=resultado.name%></h1>
+    <%if (veiculos.veiculos == "" && veiculos.naves == "") {%>
+        <h2 class="center"><%if (resultado.gender == "male") {%>He didn't drive any vehicles or starships<%} else if (resultado.gender == "female") {%>She didn't drive any vehicles or starships<%} else {%>They didn't drive any vehicles or starships<%}%></h2>
+    <%} else if (veiculos.veiculos != "") {%>
+    <h2 class="center"><%if (resultado.gender == "male") {%>He drove the following vehicles:<%} else if (resultado.gender == "female") {%>She drove the following vehicles:<%} else {%>They drove the following vehicles:<%}%></h2>
+    <hr>
+    <%for (let i = 0; i<veiculos.veiculos.length; i++) {%>
+        <h3><%=veiculos.veiculos[i].name%></a></h3>
+        <hr>    
+    <%}%><br>
+        <%if (veiculos.naves == "") {%>
+            <h2 class="center">But no starships</h2>
+        <%} else {%>
+            <h2 class="center">and the following starships:</h2>
+            <hr>
+            <%for (let i = 0; i<veiculos.naves.length; i++) {%>
+                <h3><%=veiculos.naves[i].name%></a></h3>
+                <hr>    
+            <%}}%>
+    <%} else {%>
+        <h2 class="center"><%if (resultado.gender == "male") {%>He drove the following starships:<%} else if (resultado.gender == "female") {%>She drove the following starships:<%} else {%>They drove the following starships:<%}%></h2>
+        <hr>
+        <%for (let i = 0; i<veiculos.naves.length; i++) {%>
+            <h3><%=veiculos.naves[i].name%></a></h3>
+            <hr>    
+        <%}%>   
+    <%}%>
+</body>
+</html>

@@ -1,13 +1,14 @@
 <%-include('includes/header')%>
 <body>
-    <form action="/" method="post">
+    <h1 class="center">Choose a movie!</h2>
+    <form action="/" method="post" class="center">
         <select name="film">
             <%for (let i=0; i<resultado.results.length; i++) {%>
             <option value="<%=i+1%>"><%=resultado.results[i].title%></option>
             <%}%>
         </select>
         <br>
-        <input type="submit" value="Pesquisar">
+        <input type="submit" value="Go!">
     </form>
 </body>
 </html>

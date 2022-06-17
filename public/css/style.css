@@ -1,0 +1,36 @@
+body {
+    background: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+    color: #feda4a;
+    font-family: 'Star Jedi', arial;
+}
+
+.center {
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 4em;
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+select {
+    font-size: 1.35em;
+}
+
+input {
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 5px;
+    border: #00ccff 1px solid;
+}
+
+input:hover {
+    background-color: #00ccff;
+    color: white;
+}

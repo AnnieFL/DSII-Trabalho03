@@ -1,10 +1,11 @@
 <%-include('includes/header')%>
 <body>
-    <h1><%=resultado.title%></h1>
-    <h2>Characters:</h2>
+    <h1 class="titulo"><%=resultado.title%></h1>
+    <h2 class="center">Characters:</h2>
     <hr>
     <%for (let i = 0; i<personagens.length; i++) {%>
-        <h3><a href='personagem/<%=personagens[i].url.split('/')[5]%>'><%=personagens[i].name%></a></h3>
+        <h3><%=personagens[i].name%></h3>
+            <a href='personagem/<%=personagens[i].url.split('/')[5]%>'><%if (personagens[i].gender == "male") {%>What did he drive?<%} else if (personagens[i].gender == "female") {%>What did she drive?<%} else {%>What did they drive?<%}%></a>
         <hr>    
     <%}%>
 </body>
